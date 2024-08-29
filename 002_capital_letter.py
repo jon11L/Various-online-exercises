@@ -1,4 +1,4 @@
-# create a script that that takes a string and return a list of string of all the capital letters
+# create a script that takes a string and return all the capital letters in a list of string.
 
 def capitals(str):
     new_string = []
