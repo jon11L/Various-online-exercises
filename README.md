@@ -13,3 +13,7 @@
 ### ex 6:  Write a function that takes a list of numbers as input and returns the sum of all the even numbers.
 
 ### ex 7: python script that imports the math module and uses it to calculate the area and circumference of a circle based on a user-provided radius.
+
+### ex 8:  Create a program that converts temperatures between Celsius and Fahrenheit. The user should input the temperature and choose the conversion direction.
+
+### ex 9: create a program that simulates a basic ATM machine. The user should be able to check their balance, deposit and withdraw money. Use functions to handle each operation.
