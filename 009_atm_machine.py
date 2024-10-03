@@ -8,7 +8,7 @@ class ATM():
         amount_deposit = float(input("Type the amount you would like to deposit? "))
         if amount_deposit > 0:
             self._balance += amount_deposit
-            return f"{amount_deposit}e was deposit into your account. \n"
+            return f"\n{amount_deposit}e was deposit into your account. \n"
         else: 
             return f"Error, invalid operation. \n"
         # return self.money
@@ -22,30 +22,24 @@ class ATM():
             else:
                 self._balance -= withdraw_money
                 transaction = True
-                return f"{withdraw_money}e was withdrawn from your account. \n"
+                return f"'{withdraw_money} euros' was withdrawned from your account. \n"
 
     def check_balance(self):
-        return f"You have a balance of {self._balance}euros in your account. \n"
+        return f"You have a balance of '{self._balance} euros' in your account. \n"
         
 
 Marc = ATM(100)
 
-print(Marc.deposit())
-
-print(Marc.deposit())
-
-print(Marc.check_balance())
-print(Marc.withdraw())
-print(Marc.deposit())
-
-print(Marc.check_balance())
-
-
-
-
-
-# better with print statement or call the function ?
-# what are the different impacts ?
-
-# surely better calling the function and use print statement instead.
-# just would like to figure  a way so that balance cannot be modified..
+while True:
+    operation = input("Enter your operation (deposit, withdraw, balance, quit): ")
+    if operation.lower() == "deposit":
+        print(Marc.deposit())
+    elif operation.lower() == "withdraw":
+        print(Marc.withdraw())
+    elif operation.lower() == "balance":
+        print(Marc.check_balance())
+    elif operation.lower() == "quit":
+        print("Thank you, goodbye!")
+        break
+    else:
+        print("Invalid operation. Please try again.")
